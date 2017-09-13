@@ -1,0 +1,338 @@
+
+
+/* Base Styles
+----------------------------------------*/
+html {
+  background: #fff;
+  
+  /* set the REM */
+  font-size: 24px;
+  line-height: 1.75rem;
+}
+
+body {
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-top:0;
+    background-image: url("/images/vacation-background.png");
+    background-size: cover;
+    height: 200px;
+    color: #16325C;
+}
+
+.header h1 {
+    margin-bottom: .25em;
+    margin-top: 0;
+    padding-top: 50px
+}
+
+.header p {
+    font-weight: 100;
+    font-size: 14px
+}
+
+.demo-wrapper {
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 940px;
+  text-align: center;
+}
+
+
+
+/* NL Form - Base
+----------------------------------------*/
+.nl-form-wrapper,
+.nl-form {
+  display: block;
+  width: 100%;
+  
+	/* collapse whitespace for the wrapper so inline-block elements are flush with eachother, and re-set within the child elements */
+	font-size: 0;
+	
+	font-family: sans-serif;
+
+	display: inline-block; /* shrink-wrap */
+}
+.nl-form-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  
+  /* border: 4px solid salmon; */
+}
+.nl-form span {
+  
+	font-size: 1.125rem; /* 18px */
+  line-height: 2.055rem;
+  color: #454545;
+    font-weight: 300;
+  
+  /*background: #c5c5c5;*/
+}
+.nl-form select,
+.nl-form input,
+.nl-form button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+.nl-form select:focus,
+.nl-form input:focus,
+.nl-form button:focus {
+  outline: none;
+}
+
+/* BRs: 
+manual breaks for nice formatting, and to prevent crazy reflows in the medium and large ranges. disable for Small range */
+br.hide-for-small {
+  display: none;
+}
+@media (min-width: 641px) {
+	br.hide-for-small {
+    display: inline-block;
+  }
+}
+
+
+
+/* NL Form - <Select> & [Input] Shared Styles
+----------------------------------------*/
+.nl-faux-select,
+.nl-faux-text-input {
+  display: inline-block;
+  width: auto;
+	
+  line-height: 1.55rem;
+  
+  /* border-bottom: 2px solid rgba(0,0,0,0.50); */
+  border-bottom: 3px solid #FF3366; /* red */
+  
+  color: #16325C;
+  
+  /* Safari acts a little weird with this transition - removing it for now */
+  /*-webkit-transition: 
+    all 0.3s ease-out 0.05s;
+	transition: 
+		all 0.3s ease-out 0.05s;*/
+  
+  /*background: #d5d5d5;*/
+}
+
+.nl-select-wrapper,
+.nl-text-input-wrapper{
+  position: relative;
+}
+.nl-select-wrapper a,
+.nl-select-wrapper a:hover,
+.nl-select-wrapper a:focus,
+.nl-text-input-wrapper a,
+.nl-text-input-wrapper a:hover,
+.nl-text-input-wrapper a:focus {
+  color: inherit;
+  color: #111;
+  text-decoration: none;
+}
+
+.nl-form select,
+.nl-form select:focus,
+.nl-form input[type="text"],
+.nl-form input[type="text"]:focus{
+	width: auto;
+	height: auto;
+  
+  display: block;
+
+	/* making the <select> elements not visible visually, but positioned near the <a> tags that will open them */
+	width: 1px;
+	height: 1px;
+	color: transparent;
+	background: transparent;
+	border: none;
+	font-size: 1rem;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	
+  position: absolute;
+	left: 0;
+	top: 50%;
+
+	border: 0;
+
+/* 	border: 1px solid red; */
+}
+
+
+
+
+/* NL Form - <Select> Shared Styles
+----------------------------------------*/
+.nl-select-wrapper {
+  /*display: inline-block;*/
+  /**/display: inline;
+  width: auto;
+  overflow: hidden;
+  
+  position: relative;
+  
+  /*border: 4px solid #ccc;*/
+}
+
+.nl-select-wrapper select,
+.nl-select-wrapper select:focus {
+  display: block;
+  
+  width: 100%;
+	height: 100%;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  
+  opacity: 0.001;
+  
+  /*border: 4px solid #999;*/
+}
+.nl-select-wrapper select:focus {
+  /*z-index: 2;
+  opacity: 1.0;*/
+}
+
+.nl-faux-select {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* style the <select> pointer with an :after pseudo-element if needed */
+.nl-faux-select:after {
+	content: '';
+	display: inline-block;
+	margin-left: 0.5rem;
+	width: 0.625rem;
+	height: 0.625rem;
+  
+  /* SVG graphic for dropdown arrows on faux select */
+	/*background: url(#) no-repeat 0 0 transparent;*/
+  
+  /* pointer for the demo without a BG image */
+  /* in real version switch to a bg image */
+  content: '▾';
+  /*content: '↓';*/
+  font-size: 16px;
+  text-align: center;
+  margin-left: 0.15rem;
+  margin-right: 0rem;
+	width: 0.625rem;
+	height: 1rem;
+  -webkit-transform: translate(0, -7px);
+  transform: translate(0, -7px);
+  
+  /*border: 1px solid red;*/
+}
+
+
+
+
+/* NL Form - Location Input
+----------------------------------------*/
+.nl-faux-text-input,
+.nl-faux-text-input:focus {
+  outline: none;
+}
+
+/* Show the Tooltip when the faux-input is focused */
+.nl-location-wrapper {
+  display: inline-block;
+  width: auto;
+  overflow: visible;
+}
+.nl-location-wrapper.kick {
+  /* benign style for the browser to draw when element is kicked with a class on blur and keyup */
+  background: transparent;
+}
+
+.nl-location-tooltip {
+  /* hide this element for Small */
+  display: none;
+  
+  /* set a width so the tooltip doesn't line wrap when the parent element changes size */
+  min-width: 400px;
+  
+  position: absolute;
+  left: 2px;
+  top: 2.25rem;
+  
+  text-align: left;
+  
+  pointer-events: none;
+  
+  opacity: 0.0;
+  
+  -webkit-transition: 
+    all 0.3s ease-out 0.05s;
+	transition: 
+		all 0.3s ease-out 0.05s;
+}
+@media (min-width: 641px) {
+	.nl-location-tooltip {
+    /* show this element for Medium, Large */
+    display: block;
+  }
+}
+.nl-location-tooltip,
+.nl-location-tooltip * {
+  color: #666;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 100;
+  font-style: normal;
+}
+.nl-location-tooltip em {
+  color: #222;
+}
+
+.nl-faux-text-input:focus ~ .nl-location-tooltip {
+  opacity: 1.0;
+}
+
+
+
+/* NL Form - Submit
+----------------------------------------*/
+
+.nl-submit-wrapper {
+  margin: 40px auto 0 auto;
+  text-align: center;
+  
+}
+.nl-submit {
+  display: inline-block;
+  min-width: 170px;
+  padding: 12px 24px;
+  border-radius: 2em;
+  font-weight: 100;
+  font-size: 0.55rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+  color: #fff;
+  
+  background: #FF3366; /* red */
+  
+  border: 0px;
+}
+
+

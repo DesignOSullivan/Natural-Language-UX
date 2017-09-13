@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Emb Natural Language Form</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+ 
+ <div class="header">
+  <h1>We're Here to Help</h1>
+<p>Get an idea of what rates you can expect</p>  
+</div>
+  
+
+<main class="demo-wrapper">
+
+
+
+
+<!-- Emb Natural Language Form -->
+<div class="nl-form-wrapper">
+
+	<form 
+		id="nl-form" 
+		class="nl-form" 
+		method=""
+	>
+		
+		<span>I would like to borrow $</span>
+		
+		<!-- Location -->
+		<span 
+      id="nl-location-wrapper"
+			class="nl-location-wrapper nl-text-input-wrapper"
+		>
+
+			<!-- Location Input -->
+			<input 
+				id="nl-location-input" 
+				class="nl-location-input" 
+				type="text" 
+				value="" 
+				placeholder="0" 
+			/>
+
+			<!-- Location Faux Input - can render inline -->
+			<span 
+				id="nl-location-faux-input" 
+	            class="nl-location-faux-input nl-faux-text-input" 
+	            contentEditable="true" 
+	            data-placeholder="0" 
+	        >0</span>
+
+	        <!-- Tooltip - show only when focused -->
+<!--
+			<span 
+				id="nl-location-tooltip"
+				class="nl-location-tooltip"
+			>
+				For example: <em>DAL Dallas Love Field</em> or <em>New York</em>
+			</span>
+-->
+
+		 &nbsp;</span>
+		<!-- / Location -->
+
+		
+		
+		<span>for <br class="hide-for-small" /></span>
+
+		<!-- Range -->
+		<span 
+			class="nl-range-wrapper nl-select-wrapper"
+		>
+
+			<!-- Range - Select -->
+			<select 
+				id="nl-range-select" 
+				class="nl-range-select" 
+			>
+
+				<option 
+					value="" 
+					disabled
+				>
+					Select Your Reason
+				</option>
+				
+				<option 
+					value="something" 
+					selected
+				>
+					something
+				</option>
+				
+				<option 
+					value="Debt Consolidation"
+				>
+					debt consolidation
+				</option>
+				
+				<option 
+					value="Home Improvement"
+				>
+					home improvement
+				</option>
+				
+				<option 
+					value="medical / dental"
+				>
+					medical / dental
+				</option>
+				
+				<option 
+					value="Household Expenses"
+				>
+					household expenses
+                </option>
+                
+                <option 
+					value="a Special Occasion"
+				>
+					a special occasion
+                </option>
+                
+                <option 
+					value="a vacation"
+				>
+					a vacation
+                </option>
+                
+                <option 
+					value="baby adoption"
+				>
+					baby adoption
+                </option>
+
+			</select>
+
+			<!-- RANGE - faux-select, element can render inline  -->
+	        <a 
+	            id="nl-range-rendered" 
+				class="nl-range-rendered nl-faux-select no-smoothState" 
+				href="#" 
+	        >
+	            <!-- Match the default RANGE value to the default selected option on the <select> element above -->
+	            something</a
+	        >
+
+        </span>
+        <!-- / Range -->
+		
+		<span>, which will <br class="hide-for-small" />make my payments <b>$145/mo</b> for <br class="hide-for-small"> </span>
+
+<!-- Jet Size -->
+		<span 
+			class="nl-jet-size-wrapper nl-select-wrapper"
+		>
+
+			<!-- Jet Size - Select -->
+			<select 
+				id="nl-jet-size-select" 
+				class="nl-jet-size-select" 
+			>
+
+				<option 
+					value="" 
+					disabled
+				>
+					Select Your Term
+				</option>
+				
+				<option 
+					value="1 year" 
+					selected
+				>
+					1 year
+				</option>
+				
+				<option 
+					value="18 months"
+				>
+					18 months
+				</option>
+        
+        <option 
+					value="3 years"
+				>
+					3 years
+				</option>
+				
+				<option 
+					value="5 yearas"
+				>
+					5 years
+				</option>
+
+			</select>
+
+			<!-- JET SIZE - faux-select, element can render inline  -->
+	        <a 
+	            id="nl-jet-size-rendered" 
+				class="nl-jet-size-rendered nl-faux-select no-smoothState" 
+				href="#" 
+	        >
+	            <!-- Match the default JET SIZE value to the default selected option on the <select> element above -->
+	            1 year</a
+	        >
+
+		</span>
+        <!-- / Jet Size -->		
+
+		<span>&nbsp;at an APR of <b>3.3%</b></span>
+		
+		<div class="nl-submit-wrapper">
+			
+			<button 
+				id="nl-submit" 
+				class="nl-submit" 
+				type="submit"
+			>
+				Get Personalized Rates
+			</button>
+		
+		</div>
+	
+	</form>
+</div>
+<!-- / Emb Natural Language Form -->
+
+
+
+
+
+</main>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
