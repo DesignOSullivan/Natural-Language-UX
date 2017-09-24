@@ -1,249 +1,297 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Emb Natural Language Form</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <meta charset="UTF-8">
+    <title>Natural Language Form Research</title>
 
-  
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+-->
+    <!-- Hotjar Tracking Code for http://uxsurf.com/research/ -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 630034,
+                hjsv: 5
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106784619-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106784619-1');
+    </script>
+
 </head>
 
 <body>
- 
- <div class="header">
-  <h1>We're Here to Help</h1>
-<p>Get an idea of what rates you can expect</p>  
-</div>
-  
 
-<main class="demo-wrapper">
+    <!--
+    <div>
+        <div id="fancyNatural" class="container demo-1 collapse multi-collapse show">
+             Top Navigation 
+            <div class="codrops-top clearfix">
+                <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/MorphingDevices/"><span>Previous Demo</span></a>
+                <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15139"><span>Back to the Codrops Article</span></a>
+                </span>
+            </div>
+            <header>
+                <h1>Natural Language Form <span>with custom input elements</span></h1>
+            </header>
+            <div class="main clearfix">
+                <form id="nl-form" class="nl-form">
+                    I'd like to pledge $
+                    <input type="text" id="amount" value="" placeholder="0" />
+                    <br />a month for
+                    <select id="timeframe">
+						<option value="1" selected>1 year</option>
+						<option value="2">18 months</option>
+						<option value="3">3 years</option>
+						<option value="4">5 years</option>
+					</select>
+                    <br />to
+                    <select id="cause">
+						<option value="1" selected>a good cause</option>
+					 	<option value="1">homeless unicorns</option>
+					 	<option value="2">lazy dragons</option>
+					</select> which will provide #N of meals to families in need.
+                <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#Intro, #fancyForm" aria-expanded="true" aria-controls="Intro fancyForm"><i class="fa fa-arrow-left"></i> BACK</button>
 
-
-
-
-<!-- Emb Natural Language Form -->
-<div class="nl-form-wrapper">
-
-	<form 
-		id="nl-form" 
-		class="nl-form" 
-		method=""
-	>
-		
-		<span>I would like to borrow $</span>
-		
-		<!-- Location -->
-		<span 
-      id="nl-location-wrapper"
-			class="nl-location-wrapper nl-text-input-wrapper"
-		>
-
-			<!-- Location Input -->
-			<input 
-				id="nl-location-input" 
-				class="nl-location-input" 
-				type="text" 
-				value="" 
-				placeholder="0" 
-			/>
-
-			<!-- Location Faux Input - can render inline -->
-			<span 
-				id="nl-location-faux-input" 
-	            class="nl-location-faux-input nl-faux-text-input" 
-	            contentEditable="true" 
-	            data-placeholder="0" 
-	        >0</span>
-
-	        <!-- Tooltip - show only when focused -->
-<!--
-			<span 
-				id="nl-location-tooltip"
-				class="nl-location-tooltip"
-			>
-				For example: <em>DAL Dallas Love Field</em> or <em>New York</em>
-			</span>
+                                <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#Intro, #fancyForm" aria-expanded="true" aria-controls="Intro fancyForm">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
 -->
 
-		 &nbsp;</span>
-		<!-- / Location -->
+    <!--   HEADER   -->
+    <div id="Intro" class="collapse multi-collapse show">
+        <div class="jumbotron fullHeight">
+            <div class="section">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="display-3">Hi, Friend!</h1>
+                        <p class="lead">I'm glad you're here. I would love some feedback from you. Please take a moment to complete these two forms, and answer a few questions about your experience.</p>
+                        <hr class="my-4">
+                        <p class="sosumi">These forms are nonsensicle and do not store any data.</p>
+                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #Intro" aria-expanded="true" aria-controls="naturalLanguageForm Intro">
+				Let's do this!
+			</button>
 
-		
-		
-		<span>for <br class="hide-for-small" /></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Range -->
-		<span 
-			class="nl-range-wrapper nl-select-wrapper"
-		>
+    </div>
 
-			<!-- Range - Select -->
-			<select 
-				id="nl-range-select" 
-				class="nl-range-select" 
-			>
+    <main class="demo-wrapper">
 
-				<option 
-					value="" 
-					disabled
-				>
-					Select Your Reason
-				</option>
+
+
+
+        <!-- NATURAL LANGUAGE FORM -->
+
+        <div class="collapse" id="naturalLanguageForm">
+
+            <!-- Emb Natural Language Form -->
+            <div class="nl-form-wrapper section fullHeight">
+                <div class="row titleRow">
+                    <div class="col-md-12">
+                        <h1 class="">Natural Language Form</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="nl-form" class="nl-form" method="">
+                            <span>I'd like to pledge <b>$</b></span>
+                            <!-- Location -->
+                            <span id="nl-location-wrapper" class="nl-location-wrapper nl-text-input-wrapper bold">
+
+			                 <!-- Location Input -->
+			                 <input [type="number"]id="nl-location-input" class="nl-location-input" type="text" value="" placeholder="0" />
+
+			                 <!-- Location Faux Input - can render inline -->
+			                 <span [type="number"] id="nl-location-faux-input" class="nl-location-faux-input nl-faux-text-input bold" contentEditable="true" data-placeholder="0" >0</span>
+                            </span>
+                            <!-- / Location -->
+
+                            <span>&nbsp;a month for&nbsp;</span>
+                            
+                            <div id="causeDrop" class="natural dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    1 month
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item active" href="#">1 month</a>
+                                    <a class="dropdown-item" href="#">3 months</a>
+                                    <a class="dropdown-item" href="#">6 months</a>
+                                    <a class="dropdown-item" href="#">9 months</a>
+                                    <a class="dropdown-item" href="#">12 months</a>
+                                  </div>
+                                </div>
+
+                            <!-- Term -->
+                            <span class="nl-jet-size-wrapper nl-select-wrapper">
+
+			<!-- Term - Select -->
+<!--
+			<select id="nl-jet-size-select drop" class="nl-jet-size-select" >
+
+				<option value="" disabled>Select Your Term</option>
 				
-				<option 
-					value="something" 
-					selected
-				>
-					something
-				</option>
+				<option value="1 month" selected>1 month</option>
 				
-				<option 
-					value="Debt Consolidation"
-				>
-					debt consolidation
-				</option>
+				<option value="3 months">3 months</option>
+        
+                <option value="6 years">6 months</option>
 				
-				<option 
-					value="Home Improvement"
-				>
-					home improvement
-				</option>
-				
-				<option 
-					value="medical / dental"
-				>
-					medical / dental
-				</option>
-				
-				<option 
-					value="Household Expenses"
-				>
-					household expenses
-                </option>
-                
-                <option 
-					value="a Special Occasion"
-				>
-					a special occasion
-                </option>
-                
-                <option 
-					value="a vacation"
-				>
-					a vacation
-                </option>
-                
-                <option 
-					value="baby adoption"
-				>
-					baby adoption
-                </option>
+				<option value="12 yearas">12 months</option>
 
 			</select>
+-->
 
-			<!-- RANGE - faux-select, element can render inline  -->
-	        <a 
-	            id="nl-range-rendered" 
-				class="nl-range-rendered nl-faux-select no-smoothState" 
-				href="#" 
-	        >
-	            <!-- Match the default RANGE value to the default selected option on the <select> element above -->
-	            something</a
-	        >
+                                
+			<!-- TERM - faux-select, element can render inline  -->
+	        <a id="nl-jet-size-rendered" class="nl-jet-size-rendered nl-faux-select no-smoothState bold" href="#" >1 month</a>
+		</span>
+                            <!-- / Term -->
+
+                            <span>to&nbsp;</span>
+
+                            <!-- Reason -->
+                            <span class="nl-range-wrapper nl-select-wrapper">
+
+			                 <!-- Reason - Select -->
+			                 <select id="nl-range-select" class="nl-range-select" >
+
+				                    <option value="" disabled>Select Your Cause</option>
+				
+				                    <option value="a good cause" selected>a good cause</option>
+				
+				                    <option value="T-Rexs with short arms">homeless unicorns</option>
+				
+				                    <option value="hurricane Harvey victims">lazy dragons</option>
+
+			                 </select>
+
+			<!-- REASON - faux-select, element can render inline  -->
+	        <a id="nl-range-rendered" class="nl-range-rendered nl-faux-select no-smoothState bold" href="#">a good cause</a>
 
         </span>
-        <!-- / Range -->
-		
-		<span>, which will <br class="hide-for-small" />make my payments <b>$145/mo</b> for <br class="hide-for-small"> </span>
+                            <!-- / Reason -->
 
-<!-- Jet Size -->
-		<span 
-			class="nl-jet-size-wrapper nl-select-wrapper"
-		>
+                            <span>, which will provide <b id="meals">0</b> meals to families in need!</span>
+                            <!--                            <span>, which will be a total gift of <b id="total">$0</b>, providing <b id="meals">0</b> meals to families in need!</span>-->
 
-			<!-- Jet Size - Select -->
-			<select 
-				id="nl-jet-size-select" 
-				class="nl-jet-size-select" 
-			>
 
-				<option 
-					value="" 
-					disabled
-				>
-					Select Your Term
-				</option>
-				
-				<option 
-					value="1 year" 
-					selected
-				>
-					1 year
-				</option>
-				
-				<option 
-					value="18 months"
-				>
-					18 months
-				</option>
-        
-        <option 
-					value="3 years"
-				>
-					3 years
-				</option>
-				
-				<option 
-					value="5 yearas"
-				>
-					5 years
-				</option>
+                            <div class="nl-submit-wrapper">
+                                <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#Intro, #naturalLanguageForm" aria-expanded="true" aria-controls="Intro naturalLanguageForm"><i class="fa fa-arrow-left"></i> BACK</button>
 
-			</select>
+                                <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="naturalLanguageForm regForm">Next</button>
 
-			<!-- JET SIZE - faux-select, element can render inline  -->
-	        <a 
-	            id="nl-jet-size-rendered" 
-				class="nl-jet-size-rendered nl-faux-select no-smoothState" 
-				href="#" 
-	        >
-	            <!-- Match the default JET SIZE value to the default selected option on the <select> element above -->
-	            1 year</a
-	        >
+                            </div>
 
-		</span>
-        <!-- / Jet Size -->		
+                        </form>
+                    </div>
 
-		<span>&nbsp;at an APR of <b>3.3%</b></span>
-		
-		<div class="nl-submit-wrapper">
-			
-			<button 
-				id="nl-submit" 
-				class="nl-submit" 
-				type="submit"
-			>
-				Get Personalized Rates
+                </div>
+            </div>
+            <!-- / Emb Natural Language Form -->
+        </div>
+
+        <!--   HEADER   -->
+        <div id="regForm" class="collapse multi-collapse">
+            <div class="section fullHeight">
+
+
+                <div class="row titleRow">
+                    <div class="col-sm-12 center">
+                        <h1 class="">Standard Web Form</h1>
+                        <p>Would you like to help out those in need? Please fill out this form to help a cause.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Pledge Amount</label>
+                        <input class="form-control form-control">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Period</label>
+                        <select class="form-control form-control"><option>1 Year</option><option>18 months</option><option>2 years</option></select>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Charity</label>
+                        <select class="form-control form-control"><option>a good cause</option><option>trexs with small arms</option><option>fish with a drinking problem</option></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="regForm naturalLanguageForm">
+				<i class="fa fa-arrow-left"></i> BACK
 			</button>
-		
-		</div>
-	
-	</form>
-</div>
-<!-- / Emb Natural Language Form -->
+                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#regForm, #gForm" aria-expanded="true" aria-controls="regForm gForm">
+				All Set
+			</button>
 
 
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="collapse" id="gForm">
+            <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#gForm, #regForm" aria-expanded="true" aria-controls="regForm gForm">
+				<i class="fa fa-arrow-left"></i> BACK
+			</button>
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSer1SsCJSuu7d1PSGXTLGXwJ9vpoyhjbR8lEyQSmflI7KWV7w/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
+            </div>
 
-</main>
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        </div>
+
+
+    </main>
+
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
     <script src="js/index.js"></script>
+    <!--    <script src="js/nlform.js"></script>-->
 
+    <!--
+    <script>
+        var nlform = new NLForm(document.getElementById('nl-form'));
+    </script>
+-->
 </body>
+
 </html>

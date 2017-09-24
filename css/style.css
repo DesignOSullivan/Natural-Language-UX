@@ -1,338 +1,483 @@
-
-
 /* Base Styles
 ----------------------------------------*/
+
 html {
-  background: #fff;
-  
-  /* set the REM */
-  font-size: 24px;
-  line-height: 1.75rem;
+    background: #fff;
+    /* set the REM */
+    font-size: 24px;
+    line-height: 1.75rem;
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-
-}
+body {}
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.header {
-    text-align: center;
-    margin-top:0;
-    background-image: url("/images/vacation-background.png");
-    background-size: cover;
-    height: 200px;
-    color: #16325C;
+.titleRow{
+    padding-top: 1rem;
+    margin-bottom: 3rem;
 }
-
-.header h1 {
-    margin-bottom: .25em;
-    margin-top: 0;
-    padding-top: 50px
-}
-
-.header p {
-    font-weight: 100;
-    font-size: 14px
-}
-
 .demo-wrapper {
-  margin: 40px auto;
-  padding: 0 20px;
-  max-width: 940px;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
+form-group{
+    text-align: left;
+}
+
+#Intro{
+    
+}
+
+.natural.dropdown{
+    display: inline-block;
+}
+
+.natural.dropdown button {
+    background: transparent;
+    border-radius: 0;
+    border-bottom: #454545 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    padding: 0 0 15px 0;
+    font-weight: 900;
+    color: #454545;
+}
+
+.natural.dropdown .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
+    background: transparent;
+    border-color: #fff;
+}
+
+#naturalLanguageForm{
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.btn-link{
+    color:white;
+    cursor: pointer;
+    transform: all .3s ease;
+    font-size: 15px;
+}
+.btn-link:hover{
+    color: #fff;
+}
+
+#regForm{
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+#gForm .btn-link{
+    color: #056DAE;
+}
+
+.center{
+    text-align: center;
+}
+
+.lead{
+    text-align: justify;
+}
+.section{
+    max-width: 1178px;
+    margin: 0 auto;
+}
+
+.fullHeight{
+    height: 100vh;
+}
 
 
 /* NL Form - Base
 ----------------------------------------*/
+
+.jumbotron{
+    background-image: url("../images/desk.jpg");
+    background-size: cover;
+        background-position: bottom center;
+    color: #056DAE;
+    text-align: center;
+}
+
+.jumbotron h1{
+    font-weight: 500;
+}
+
+.jumbotron p{
+    font-weight: 300;
+}
+
+.sosumi{
+    font-size: .7em;
+    color: #afafaf
+}
+
+.bold{
+    font-weight: 500 !important;
+}
+
 .nl-form-wrapper,
 .nl-form {
-  display: block;
-  width: 100%;
-  
-	/* collapse whitespace for the wrapper so inline-block elements are flush with eachother, and re-set within the child elements */
-	font-size: 0;
-	
-	font-family: sans-serif;
+    display: block;
+    width: 100%;
+    /* collapse whitespace for the wrapper so inline-block elements are flush with eachother, and re-set within the child elements */
+    font-size: 0;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    /* shrink-wrap */
+}
 
-	display: inline-block; /* shrink-wrap */
-}
 .nl-form-wrapper {
-  margin: 0 auto;
-  text-align: center;
-  
-  /* border: 4px solid salmon; */
+    margin: 0 auto;
+    text-align: center;
+    /* border: 4px solid salmon; */
 }
-.nl-form span {
-  
-	font-size: 1.125rem; /* 18px */
-  line-height: 2.055rem;
-  color: #454545;
+
+.nl-form span{
+    font-size: 24px;
+    /* 18px */
+    line-height: 2.6rem;
+    color: #454545;
     font-weight: 300;
-  
-  /*background: #c5c5c5;*/
+    word-spacing: 8px;
+    letter-spacing: 1px;
+    min-width: 40px;
+    cursor: pointer;
+    /*background: #c5c5c5;*/
 }
+
+.nl-form span b.highlight {
+    background-color: rgba(170, 170, 255, .25);
+    border-radius: 14px;
+    padding: 0 .4em;
+}
+
 .nl-form select,
 .nl-form input,
 .nl-form button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
+
 .nl-form select:focus,
 .nl-form input:focus,
 .nl-form button:focus {
-  outline: none;
+    outline: none;
 }
+
 
 /* BRs: 
 manual breaks for nice formatting, and to prevent crazy reflows in the medium and large ranges. disable for Small range */
+
 br.hide-for-small {
-  display: none;
-}
-@media (min-width: 641px) {
-	br.hide-for-small {
-    display: inline-block;
-  }
+    display: none;
 }
 
+
+@media screen only and (max-width: 980px) {
+    br.hide-for-small {
+        display: inline-block;
+    }
+/*
+    
+    button.nl-submit{
+        font-size: 1.5rem;
+        padding: 20px 75px !important;
+    }
+    
+    p.sosumi{
+        font-size: 1.5rem;
+    }
+    p.lead{
+        font-size: 1.75rem;
+        text-align: justify;
+    }
+    .nl-form span{
+        font-size: 1.75rem;
+    }
+    .form-group{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+input, select{height: 3rem !important;}
+*/
+}
 
 
 /* NL Form - <Select> & [Input] Shared Styles
 ----------------------------------------*/
+
 .nl-faux-select,
 .nl-faux-text-input {
-  display: inline-block;
-  width: auto;
-	
-  line-height: 1.55rem;
-  
-  /* border-bottom: 2px solid rgba(0,0,0,0.50); */
-  border-bottom: 3px solid #FF3366; /* red */
-  
-  color: #16325C;
-  
-  /* Safari acts a little weird with this transition - removing it for now */
-  /*-webkit-transition: 
+    display: inline-block;
+    width: auto;
+    line-height: 1.55rem;
+    /* border-bottom: 2px solid rgba(0,0,0,0.50); */
+    border-bottom: 2px solid #FF3366;
+    /* red */
+    color: #16325C;
+    /* Safari acts a little weird with this transition - removing it for now */
+    /*-webkit-transition: 
     all 0.3s ease-out 0.05s;
 	transition: 
 		all 0.3s ease-out 0.05s;*/
-  
-  /*background: #d5d5d5;*/
+    /*background: #d5d5d5;*/
+    font-weight: 500;
 }
 
 .nl-select-wrapper,
-.nl-text-input-wrapper{
-  position: relative;
+.nl-text-input-wrapper {
+    position: relative;
 }
+
 .nl-select-wrapper a,
 .nl-select-wrapper a:hover,
 .nl-select-wrapper a:focus,
 .nl-text-input-wrapper a,
 .nl-text-input-wrapper a:hover,
 .nl-text-input-wrapper a:focus {
-  color: inherit;
-  color: #111;
-  text-decoration: none;
+    color: inherit;
+    color: #111;
+    text-decoration: none;
 }
 
 .nl-form select,
 .nl-form select:focus,
 .nl-form input[type="text"],
-.nl-form input[type="text"]:focus{
-	width: auto;
-	height: auto;
-  
-  display: block;
-
-	/* making the <select> elements not visible visually, but positioned near the <a> tags that will open them */
-	width: 1px;
-	height: 1px;
-	color: transparent;
-	background: transparent;
-	border: none;
-	font-size: 1rem;
-	line-height: 0;
-	margin: 0;
-	padding: 0;
-	
-  position: absolute;
-	left: 0;
-	top: 50%;
-
-	border: 0;
-
-/* 	border: 1px solid red; */
+.nl-form input[type="text"]:focus {
+    width: auto;
+    height: auto;
+    display: block;
+    /* making the <select> elements not visible visually, but positioned near the <a> tags that will open them */
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 0;
+    /* 	border: 1px solid red; */
 }
-
-
 
 
 /* NL Form - <Select> Shared Styles
 ----------------------------------------*/
+
 .nl-select-wrapper {
-  /*display: inline-block;*/
-  /**/display: inline;
-  width: auto;
-  overflow: hidden;
-  
-  position: relative;
-  
-  /*border: 4px solid #ccc;*/
+    /*display: inline-block;*/
+    /**/
+    display: inline;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    /*border: 4px solid #ccc;*/
 }
 
 .nl-select-wrapper select,
 .nl-select-wrapper select:focus {
-  display: block;
-  
-  width: 100%;
-	height: 100%;
-  
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  
-  opacity: 0.001;
-  
-  /*border: 4px solid #999;*/
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.001;
+    /*border: 4px solid #999;*/
 }
+
 .nl-select-wrapper select:focus {
-  /*z-index: 2;
+    /*z-index: 2;
   opacity: 1.0;*/
 }
 
 .nl-faux-select {
-  position: relative;
-  z-index: 1;
-  pointer-events: none;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
 }
+
 
 /* style the <select> pointer with an :after pseudo-element if needed */
+
 .nl-faux-select:after {
-	content: '';
-	display: inline-block;
-	margin-left: 0.5rem;
-	width: 0.625rem;
-	height: 0.625rem;
-  
-  /* SVG graphic for dropdown arrows on faux select */
-	/*background: url(#) no-repeat 0 0 transparent;*/
-  
-  /* pointer for the demo without a BG image */
-  /* in real version switch to a bg image */
-  content: '▾';
-  /*content: '↓';*/
-  font-size: 16px;
-  text-align: center;
-  margin-left: 0.15rem;
-  margin-right: 0rem;
-	width: 0.625rem;
-	height: 1rem;
-  -webkit-transform: translate(0, -7px);
-  transform: translate(0, -7px);
-  
-  /*border: 1px solid red;*/
+    content: '';
+    display: inline-block;
+    margin-left: 0.5rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    /* SVG graphic for dropdown arrows on faux select */
+    /*background: url(#) no-repeat 0 0 transparent;*/
+    /* pointer for the demo without a BG image */
+    /* in real version switch to a bg image */
+    content: '▾';
+    /*content: '↓';*/
+    font-size: 16px;
+    text-align: center;
+    margin-left: 0.15rem;
+    margin-right: 0rem;
+    width: 0.625rem;
+    height: 1rem;
+    -webkit-transform: translate(0, -7px);
+    transform: translate(0, -3px);
+    /*border: 1px solid red;*/
 }
-
-
 
 
 /* NL Form - Location Input
 ----------------------------------------*/
+
 .nl-faux-text-input,
 .nl-faux-text-input:focus {
-  outline: none;
+    outline: none;
 }
 
+
 /* Show the Tooltip when the faux-input is focused */
+
 .nl-location-wrapper {
-  display: inline-block;
-  width: auto;
-  overflow: visible;
+    display: inline-block;
+    width: auto;
+    overflow: visible;
 }
+
 .nl-location-wrapper.kick {
-  /* benign style for the browser to draw when element is kicked with a class on blur and keyup */
-  background: transparent;
+    /* benign style for the browser to draw when element is kicked with a class on blur and keyup */
+    background: transparent;
 }
 
 .nl-location-tooltip {
-  /* hide this element for Small */
-  display: none;
-  
-  /* set a width so the tooltip doesn't line wrap when the parent element changes size */
-  min-width: 400px;
-  
-  position: absolute;
-  left: 2px;
-  top: 2.25rem;
-  
-  text-align: left;
-  
-  pointer-events: none;
-  
-  opacity: 0.0;
-  
-  -webkit-transition: 
-    all 0.3s ease-out 0.05s;
-	transition: 
-		all 0.3s ease-out 0.05s;
+    /* hide this element for Small */
+    display: none;
+    /* set a width so the tooltip doesn't line wrap when the parent element changes size */
+    min-width: 400px;
+    position: absolute;
+    left: 2px;
+    top: 2.25rem;
+    text-align: left;
+    pointer-events: none;
+    opacity: 0.0;
+    -webkit-transition: all 0.3s ease-out 0.05s;
+    transition: all 0.3s ease-out 0.05s;
 }
+
 @media (min-width: 641px) {
-	.nl-location-tooltip {
-    /* show this element for Medium, Large */
-    display: block;
-  }
+    .nl-location-tooltip {
+        /* show this element for Medium, Large */
+        display: block;
+    }
 }
+
 .nl-location-tooltip,
 .nl-location-tooltip * {
-  color: #666;
-  font-size: 10px;
-  line-height: 10px;
-  font-weight: 100;
-  font-style: normal;
+    color: #666;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 100;
+    font-style: normal;
 }
+
 .nl-location-tooltip em {
-  color: #222;
+    color: #222;
 }
 
-.nl-faux-text-input:focus ~ .nl-location-tooltip {
-  opacity: 1.0;
+.nl-faux-text-input:focus~.nl-location-tooltip {
+    opacity: 1.0;
 }
-
 
 
 /* NL Form - Submit
 ----------------------------------------*/
 
 .nl-submit-wrapper {
-  margin: 40px auto 0 auto;
-  text-align: center;
-  
+    margin: 40px auto 0 auto;
+    text-align: center;
 }
+
 .nl-submit {
-  display: inline-block;
-  min-width: 170px;
-  padding: 12px 24px;
-  border-radius: 2em;
-  font-weight: 100;
-  font-size: 0.55rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.10rem;
-  color: #fff;
-  
-  background: #FF3366; /* red */
-  
-  border: 0px;
+    display: inline-block;
+    margin-top: 3rem;
+    min-width: 170px;
+    padding: 8px 16px;
+    border-radius: 2em;
+    font-weight: 100;
+    font-size: 0.55rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.10rem;
+    color: #056DAE;
+    transition: all .4s ease-in-out;
+    background: #fff;
+    /* red */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15), 0 4px 8px rgba(0, 0, 0, .15);
+    border: 1px solid #056DAE;
+    cursor: pointer;
 }
 
+.nl-submit:hover {
+    display: inline-block;
+    min-width: 202px;
+    border-radius: 2rem;
+    font-weight: 100;
+    font-size: 0.55rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.50rem;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .15);
+    background: #056DAE;
+    /* red */
+    border: 1px solid #056DAE;
+}
 
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      .lead{
+          font-size: 2rem;
+      }
+      .sosumi{
+          font-size: 1.5rem;
+      }
+      .nl-submit{
+          font-size: 1.5rem;
+          padding: .5rem;
+      }
+      .nl-form span{
+    font-size: 48px;
+    /* 18px */
+    line-height: 2.6rem;
+    color: #454545;
+    font-weight: 300;
+    word-spacing: 8px;
+    letter-spacing: 1px;
+}
+      .hidelarge{
+          display: none;
+      }
+}
