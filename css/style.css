@@ -7,9 +7,13 @@ html {
     font-size: 24px;
     line-height: 1.75rem;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
-body {}
+body {
+    font-size: 1rem;
+    font-weight: 300;
+}
 
 * {
     box-sizing: border-box;
@@ -17,7 +21,13 @@ body {}
 
 .titleRow{
     padding-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+.zoo{
+    min-height: 3rem;
+}
+.animal{
+    max-height: 4rem;
 }
 .demo-wrapper {
     margin: 0;
@@ -40,14 +50,15 @@ form-group{
 .natural.dropdown button {
     background: transparent;
     border-radius: 0;
-    border-bottom: #454545 1px solid;
+    border-bottom: 2px dotted #fff;
     border-top: none;
     border-left: none;
     border-right: none;
     cursor: pointer;
     padding: 0 0 15px 0;
     font-weight: 900;
-    color: #454545;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
 }
 
 .natural.dropdown .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
@@ -55,8 +66,21 @@ form-group{
     border-color: #fff;
 }
 
+.input.dropdown button{
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,.15);
+    color: #495057;
+}
+
+.dropdown-toggle::after {
+    float: right;
+    margin-top: .5rem;
+}
+
 #naturalLanguageForm{
-    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: center;
@@ -73,7 +97,7 @@ form-group{
 }
 
 #regForm{
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: left;
@@ -99,6 +123,18 @@ form-group{
     height: 100vh;
 }
 
+#nl-location-faux-input{
+    font-weight: 900;
+}
+
+.dropdown-menu.show {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);
+}
+
+#naturalLanguageForm h1, #naturalLanguageForm .natural.dropdown button, #naturalLanguageForm span {
+    color: #fff;
+}
 
 /* NL Form - Base
 ----------------------------------------*/
@@ -146,22 +182,31 @@ form-group{
 }
 
 .nl-form span{
-    font-size: 24px;
-    /* 18px */
+    font-size: 1.25rem;
     line-height: 2.6rem;
     color: #454545;
     font-weight: 300;
     word-spacing: 8px;
     letter-spacing: 1px;
     min-width: 40px;
-    cursor: pointer;
-    /*background: #c5c5c5;*/
 }
 
-.nl-form span b.highlight {
+.nl-form h2{
+    font-size: 1.25rem;
+    line-height: 2.6rem;
+    color: #fff;
+    font-weight: 300;
+    word-spacing: 8px;
+    letter-spacing: 1px;
+    min-width: 40px;
+    display: inline-block;
+}
+
+.nl-form h2.highlight {
     background-color: rgba(170, 170, 255, .25);
     border-radius: 14px;
     padding: 0 .4em;
+    font-weight: 900;
 }
 
 .nl-form select,
@@ -193,29 +238,6 @@ br.hide-for-small {
     br.hide-for-small {
         display: inline-block;
     }
-/*
-    
-    button.nl-submit{
-        font-size: 1.5rem;
-        padding: 20px 75px !important;
-    }
-    
-    p.sosumi{
-        font-size: 1.5rem;
-    }
-    p.lead{
-        font-size: 1.75rem;
-        text-align: justify;
-    }
-    .nl-form span{
-        font-size: 1.75rem;
-    }
-    .form-group{
-        font-size: 1.5rem;
-        text-align: left;
-    }
-input, select{height: 3rem !important;}
-*/
 }
 
 
@@ -227,17 +249,9 @@ input, select{height: 3rem !important;}
     display: inline-block;
     width: auto;
     line-height: 1.55rem;
-    /* border-bottom: 2px solid rgba(0,0,0,0.50); */
-    border-bottom: 2px solid #FF3366;
-    /* red */
+    border-bottom: 2px dotted #fff;
     color: #16325C;
-    /* Safari acts a little weird with this transition - removing it for now */
-    /*-webkit-transition: 
-    all 0.3s ease-out 0.05s;
-	transition: 
-		all 0.3s ease-out 0.05s;*/
-    /*background: #d5d5d5;*/
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .nl-select-wrapper,
@@ -380,8 +394,10 @@ input, select{height: 3rem !important;}
     text-align: left;
     pointer-events: none;
     opacity: 0.0;
+/*
     -webkit-transition: all 0.3s ease-out 0.05s;
     transition: all 0.3s ease-out 0.05s;
+*/
 }
 
 @media (min-width: 641px) {
@@ -423,7 +439,7 @@ input, select{height: 3rem !important;}
     min-width: 170px;
     padding: 8px 16px;
     border-radius: 2em;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 0.55rem;
     line-height: 1.25rem;
     text-transform: uppercase;
@@ -431,9 +447,8 @@ input, select{height: 3rem !important;}
     color: #056DAE;
     transition: all .4s ease-in-out;
     background: #fff;
-    /* red */
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15), 0 4px 8px rgba(0, 0, 0, .15);
-    border: 1px solid #056DAE;
+    border: none;
     cursor: pointer;
 }
 
@@ -447,32 +462,43 @@ input, select{height: 3rem !important;}
     text-transform: uppercase;
     letter-spacing: 0.50rem;
     color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .15);
     background: #056DAE;
     /* red */
-    border: 1px solid #056DAE;
+    border: none;
 }
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
   and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+ { 
+      .natural.dropdown button{
+          font-size: 1.65rem;
+          padding-bottom: 1.3rem;
+      }
+      .natural.dropdown div a{
+          font-size: 1.65rem;
+      }
       .lead{
-          font-size: 2rem;
+          font-size: 1.65rem;
       }
       .sosumi{
-          font-size: 1.5rem;
+          font-size: 1rem;
       }
       .nl-submit{
-          font-size: 1.5rem;
-          padding: .5rem;
+          font-size: 1.65rem;
+          padding: .5rem 1.75rem;
       }
       .nl-form span{
-    font-size: 48px;
-    /* 18px */
-    line-height: 2.6rem;
-    color: #454545;
+    font-size: 1.65rem;
+    line-height: 6rem;
+    font-weight: 300;
+    word-spacing: 8px;
+    letter-spacing: 1px;
+}
+     .nl-form h2 {
+    font-size: 1.65rem;
+    line-height: 6rem;
     font-weight: 300;
     word-spacing: 8px;
     letter-spacing: 1px;
@@ -480,4 +506,17 @@ input, select{height: 3rem !important;}
       .hidelarge{
           display: none;
       }
+      #nl-location-faux-input{
+          font-weight: 900;
+      }
+     .btn-link{
+         font-size: 1.5rem;
+         padding-bottom: 1.1rem;
+     }
+     body {
+         font-size: 1.5rem;
+     }
+     .form-control, .input.dropdown .btn{
+         font-size: 1.5rem;
+     }
 }

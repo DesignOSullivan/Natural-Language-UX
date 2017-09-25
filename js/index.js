@@ -1,23 +1,70 @@
+
+
 $(document).ready(function () {
 
-
-//$('#causeDrop').change(function () {
-//    var selectedText = $(this).find("option:selected").text();
-//    
-//    console.log(selectedText);
-//});
-//
-//    $('#causeDrop').on('show.bs.dropdown', function () {
-//        var selectedText = $(this).find("option:selected").text();
-//    
-//    console.log(selectedText);
-//})
+ //Animate CSS
+        $.fn.extend({
+            animateCss: function (animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+                });
+                return this;
+            }
+        });
+ //End Animate CSS
     
-    $('.natural.dropdown div a').on('click', function(){
+    $('.dropdown div a').on('click', function () {
         var selectedText = this.text;
-        console.log(selectedText);
-        $('.dropdown button').html(selectedText);
-});
+        var parentID = $(this).parent().parent().attr('id');
+        $('#' + parentID).find('button').html(selectedText);
+    });
+
+    $('#termDrop.natural.dropdown div a').on('click', function () {
+        var selectedText = this.text;
+        var parentID = $(this).parent().parent().attr('id');
+        var amount = $('#nl-location-faux-input').text();
+        var term = selectedText.replace(" months", "");
+        $('#meals').html(amount * 3 * term);
+        $('#meals').animateCss('rubberBand');
+    });
+
+    $('#termDropReg.input.dropdown div a').on('click', function () {
+        var selectedText = this.text;
+        var parentID = $(this).parent().parent().attr('id');
+        var amount = $('#regAmount').val();
+        var term = selectedText.replace(" months", "");
+        $('#regMeals').html(amount * 3 * term);
+        $('#regMeals').animateCss('rubberBand'); 
+        console.log(amount);
+    });
+
+    $('#regAmount').on('keyup', function () {
+        var amount = this.value;
+        var term = $('#termDropReg button').text().replace(" months", "");
+        var meals = amount * 3 * term;
+        $('#regMeals').html(amount * 3 * term);
+        $('#regMeals').animateCss('rubberBand'); 
+        console.log(amount, term);
+    });
+    
+    $('#nl-location-faux-input').on('keyup', function () {
+        $('#meals').animateCss('rubberBand');
+    });
+    
+    $('.unicornButton').on('click', function () {
+        var unicorn = $(this).parents('.fullHeight').find('.unicorn.animal');
+        var elephant = $(this).parents('.fullHeight').find('.elephant.animal');
+        elephant.hide();
+        unicorn.show().animateCss('bounceIn');
+    });
+    
+    $('.elephantButton').on('click', function () {
+        var unicorn = $(this).parents('.fullHeight').find('.unicorn.animal');
+        var elephant = $(this).parents('.fullHeight').find('.elephant.animal');
+        unicorn.hide();
+        elephant.show().animateCss('bounceIn');
+    });
 
     // Emb Natural Language Form
     function natural_language_form() {
@@ -115,7 +162,8 @@ $(document).ready(function () {
         $('#nl-location-faux-input').on('keyup blur', function (event) {
 
             var current_text = $(this).text();
-            var meals = current_text * 3;
+            var term = $('#termDrop button').text().replace(" months", "");
+            var meals = current_text * 3 * term;
 
             if (current_text == '') {
 
@@ -123,16 +171,15 @@ $(document).ready(function () {
                 $('#nl-location-input').attr('value', '\xa0');
                 $('#total').removeClass('highlight').html('$0');
                 $('#meals').removeClass('highlight').html('0');
-             
+
                 //console.log('no location value');
 
             } else {
 
                 // add the typed value into the hidden input as the user types it out
                 $('#nl-location-input').attr('value', current_text);
-                $('#total').addClass('highlight').html('$' + current_text * 12);
                 $('#meals').addClass('highlight').html(meals);
-               
+
 
                 // Kick the parent element so that the browser re-draws each time
                 // This helps with text clipping and width updating on certain version of webkit
@@ -161,6 +208,7 @@ $(document).ready(function () {
 
         });
 
+       
 
     }
     natural_language_form();
@@ -171,4 +219,3 @@ $(document).ready(function () {
 
 
 });
-

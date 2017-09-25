@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--
     <link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -47,71 +48,23 @@
 </head>
 
 <body>
-
-    <!--
-    <div>
-        <div id="fancyNatural" class="container demo-1 collapse multi-collapse show">
-             Top Navigation 
-            <div class="codrops-top clearfix">
-                <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/MorphingDevices/"><span>Previous Demo</span></a>
-                <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15139"><span>Back to the Codrops Article</span></a>
-                </span>
-            </div>
-            <header>
-                <h1>Natural Language Form <span>with custom input elements</span></h1>
-            </header>
-            <div class="main clearfix">
-                <form id="nl-form" class="nl-form">
-                    I'd like to pledge $
-                    <input type="text" id="amount" value="" placeholder="0" />
-                    <br />a month for
-                    <select id="timeframe">
-						<option value="1" selected>1 year</option>
-						<option value="2">18 months</option>
-						<option value="3">3 years</option>
-						<option value="4">5 years</option>
-					</select>
-                    <br />to
-                    <select id="cause">
-						<option value="1" selected>a good cause</option>
-					 	<option value="1">homeless unicorns</option>
-					 	<option value="2">lazy dragons</option>
-					</select> which will provide #N of meals to families in need.
-                <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#Intro, #fancyForm" aria-expanded="true" aria-controls="Intro fancyForm"><i class="fa fa-arrow-left"></i> BACK</button>
-
-                                <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#Intro, #fancyForm" aria-expanded="true" aria-controls="Intro fancyForm">Next</button>
-                </form>
-            </div>
-        </div>
-    </div>
--->
-
     <!--   HEADER   -->
     <div id="Intro" class="collapse multi-collapse show">
         <div class="jumbotron fullHeight">
             <div class="section">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1 class="display-3">Hi, Friend!</h1>
-                        <p class="lead">I'm glad you're here. I would love some feedback from you. Please take a moment to complete these two forms, and answer a few questions about your experience.</p>
+                        <h1 class="display-3 animated bounceIn">Hi, Friend!</h1>
+                        <p class="lead animated fadeIn">I'm glad you're here. I would love some feedback from you. Please take a moment to complete these two forms, and answer a few questions about your experience.</p>
                         <hr class="my-4">
-                        <p class="sosumi">These forms are nonsensicle and do not store any data.</p>
-                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #Intro" aria-expanded="true" aria-controls="naturalLanguageForm Intro">
-				Let's do this!
-			</button>
-
+                        <p class="sosumi animated fadeIn">These forms are nonsensicle and do not store any data.</p>
+                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #Intro" aria-expanded="true" aria-controls="naturalLanguageForm Intro">Let's do this!</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <main class="demo-wrapper">
-
-
-
-
         <!-- NATURAL LANGUAGE FORM -->
 
         <div class="collapse" id="naturalLanguageForm">
@@ -120,103 +73,55 @@
             <div class="nl-form-wrapper section fullHeight">
                 <div class="row titleRow">
                     <div class="col-md-12">
-                        <h1 class="">Natural Language Form</h1>
+                        <h1 class="animated bounceIn">Natural Language Form</h1>
+                    </div>
+                    <div class="zoo col-md-12">
+                        <img class="unicorn animal" src="images/unicorn.png" style="display:none">
+                        <img class="elephant animal" src="images/elephant.png" style="display:none">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row animated fadeIn">
                     <div class="col-md-12">
                         <form id="nl-form" class="nl-form" method="">
                             <span>I'd like to pledge <b>$</b></span>
                             <!-- Location -->
-                            <span id="nl-location-wrapper" class="nl-location-wrapper nl-text-input-wrapper bold">
+                            <span id="nl-location-wrapper" class="nl-location-wrapper nl-text-input-wrapper">
 
 			                 <!-- Location Input -->
 			                 <input [type="number"]id="nl-location-input" class="nl-location-input" type="text" value="" placeholder="0" />
 
 			                 <!-- Location Faux Input - can render inline -->
-			                 <span [type="number"] id="nl-location-faux-input" class="nl-location-faux-input nl-faux-text-input bold" contentEditable="true" data-placeholder="0" >0</span>
+			                 <span [type="number"] id="nl-location-faux-input" class="nl-location-faux-input nl-faux-text-input" contentEditable="true" data-placeholder="0" >0</span>
                             </span>
-                            <!-- / Location -->
-
                             <span>&nbsp;a month for&nbsp;</span>
-                            
-                            <div id="causeDrop" class="natural dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    1 month
-                                  </button>
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item active" href="#">1 month</a>
+                            <div id="termDrop" class="natural dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">3 months</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">3 months</a>
                                     <a class="dropdown-item" href="#">6 months</a>
                                     <a class="dropdown-item" href="#">9 months</a>
                                     <a class="dropdown-item" href="#">12 months</a>
-                                  </div>
                                 </div>
-
-                            <!-- Term -->
-                            <span class="nl-jet-size-wrapper nl-select-wrapper">
-
-			<!-- Term - Select -->
-<!--
-			<select id="nl-jet-size-select drop" class="nl-jet-size-select" >
-
-				<option value="" disabled>Select Your Term</option>
-				
-				<option value="1 month" selected>1 month</option>
-				
-				<option value="3 months">3 months</option>
-        
-                <option value="6 years">6 months</option>
-				
-				<option value="12 yearas">12 months</option>
-
-			</select>
--->
-
-                                
-			<!-- TERM - faux-select, element can render inline  -->
-	        <a id="nl-jet-size-rendered" class="nl-jet-size-rendered nl-faux-select no-smoothState bold" href="#" >1 month</a>
-		</span>
-                            <!-- / Term -->
-
-                            <span>to&nbsp;</span>
-
-                            <!-- Reason -->
-                            <span class="nl-range-wrapper nl-select-wrapper">
-
-			                 <!-- Reason - Select -->
-			                 <select id="nl-range-select" class="nl-range-select" >
-
-				                    <option value="" disabled>Select Your Cause</option>
-				
-				                    <option value="a good cause" selected>a good cause</option>
-				
-				                    <option value="T-Rexs with short arms">homeless unicorns</option>
-				
-				                    <option value="hurricane Harvey victims">lazy dragons</option>
-
-			                 </select>
-
-			<!-- REASON - faux-select, element can render inline  -->
-	        <a id="nl-range-rendered" class="nl-range-rendered nl-faux-select no-smoothState bold" href="#">a good cause</a>
-
-        </span>
-                            <!-- / Reason -->
-
-                            <span>, which will provide <b id="meals">0</b> meals to families in need!</span>
-                            <!--                            <span>, which will be a total gift of <b id="total">$0</b>, providing <b id="meals">0</b> meals to families in need!</span>-->
-
-
+                            </div>
+                            <span>&nbsp;to&nbsp;</span>
+                            <div id="causeDrop" class="natural dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    a good cause
+                                  </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">a good cause</a>
+                                    <a class="unicornButton dropdown-item" href="#">homeless unicorns</a>
+                                    <a class="elephantButton dropdown-item" href="#">forgetfull elephants</a>
+                                </div>
+                            </div>
+                            <span>, which will provide</span> <h2 id="meals">0</h2> <span>meals to families in need!</span>
                             <div class="nl-submit-wrapper">
                                 <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#Intro, #naturalLanguageForm" aria-expanded="true" aria-controls="Intro naturalLanguageForm"><i class="fa fa-arrow-left"></i> BACK</button>
-
-                                <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="naturalLanguageForm regForm">Next</button>
-
+                                <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="naturalLanguageForm regForm">Spread the Love</button>
                             </div>
 
                         </form>
                     </div>
-
                 </div>
             </div>
             <!-- / Emb Natural Language Form -->
@@ -225,8 +130,6 @@
         <!--   HEADER   -->
         <div id="regForm" class="collapse multi-collapse">
             <div class="section fullHeight">
-
-
                 <div class="row titleRow">
                     <div class="col-sm-12 center">
                         <h1 class="">Standard Web Form</h1>
@@ -234,42 +137,59 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <label>Pledge Amount</label>
-                        <input class="form-control form-control">
+                    <div class="col-md-8">
+                        <div class="col-sm-12 form-group">
+                            <label>Pledge Amount</label>
+                            <input id="regAmount" class="form-control form-control">
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label>Period</label>
+                            <div id="termDropReg" class="input dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">3 months</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">3 months</a>
+                                    <a class="dropdown-item" href="#">6 months</a>
+                                    <a class="dropdown-item" href="#">9 months</a>
+                                    <a class="dropdown-item" href="#">12 months</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label>Charity</label>
+                            <div id="causeDropReg" class="input dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">a good cause</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">a good cause</a>
+                                    <a class="unicornButton dropdown-item" href="#">homeless unicorns</a>
+                                    <a class="elephantButton dropdown-item" href="#">forgetfull elephants</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 form-group">
-                        <label>Period</label>
-                        <select class="form-control form-control"><option>1 Year</option><option>18 months</option><option>2 years</option></select>
+                    <div class="col-md-4 center">
+                        <div class="col-sm-12 form-group">
+                            <span>Total Meals Provided <h2 id="regMeals">0</h2></span>
+                        </div>
+                        <div class="zoo col-md-12">
+                        <img class="unicorn animal" src="images/unicorn-dark.png" style="display:none">
+                        <img class="elephant animal" src="images/elephant-dark.png" style="display:none">
                     </div>
-                    <div class="col-sm-6 form-group">
-                        <label>Charity</label>
-                        <select class="form-control form-control"><option>a good cause</option><option>trexs with small arms</option><option>fish with a drinking problem</option></select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 center">
-                        <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="regForm naturalLanguageForm">
-				<i class="fa fa-arrow-left"></i> BACK
-			</button>
-                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#regForm, #gForm" aria-expanded="true" aria-controls="regForm gForm">
-				All Set
-			</button>
-
-
+                        <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#naturalLanguageForm, #regForm" aria-expanded="true" aria-controls="regForm naturalLanguageForm"><i class="fa fa-arrow-left"></i> BACK</button>
+                        <button id="nl-submit" class="nl-submit" type="button" data-toggle="collapse" data-target="#regForm, #gForm" aria-expanded="true" aria-controls="regForm gForm">Spread the Love</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div class="collapse" id="gForm">
-            <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#gForm, #regForm" aria-expanded="true" aria-controls="regForm gForm">
-				<i class="fa fa-arrow-left"></i> BACK
-			</button>
+            <button id="" class="btn btn-link" type="button" data-toggle="collapse" data-target="#gForm, #regForm" aria-expanded="true" aria-controls="regForm gForm"><i class="fa fa-arrow-left"></i> BACK</button>
             <div class="row">
                 <div class="col-md-12">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSer1SsCJSuu7d1PSGXTLGXwJ9vpoyhjbR8lEyQSmflI7KWV7w/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSer1SsCJSuu7d1PSGXTLGXwJ9vpoyhjbR8lEyQSmflI7KWV7w/viewform?embedded=true" width="100%" height="2000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
                 </div>
             </div>
 
