@@ -19,31 +19,32 @@ body {
     box-sizing: border-box;
 }
 
-.titleRow{
+.titleRow {
     padding-top: 1rem;
     margin-bottom: 2rem;
 }
-.zoo{
-    min-height: 3rem;
+
+.zoo {
+    height: 3rem;
 }
-.animal{
+
+.animal {
     max-height: 4rem;
 }
+
 .demo-wrapper {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-form-group{
+form-group {
     text-align: left;
 }
 
-#Intro{
-    
-}
+#Intro {}
 
-.natural.dropdown{
+.natural.dropdown {
     display: inline-block;
 }
 
@@ -61,16 +62,18 @@ form-group{
     font-size: 1.25rem;
 }
 
-.natural.dropdown .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
+.natural.dropdown .btn-secondary.active,
+.btn-secondary:active,
+.show > .btn-secondary.dropdown-toggle {
     background: transparent;
     border-color: #fff;
 }
 
-.input.dropdown button{
+.input.dropdown button {
     background: #fff;
     width: 100%;
     text-align: left;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     color: #495057;
 }
 
@@ -79,88 +82,113 @@ form-group{
     margin-top: .5rem;
 }
 
-#naturalLanguageForm{
+#naturalLanguageForm {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: center;
 }
 
-.btn-link{
-    color:white;
+.btn-link {
+    color: white;
     cursor: pointer;
     transform: all .3s ease;
     font-size: 15px;
 }
-.btn-link:hover{
+
+.btn-link:hover {
     color: #fff;
 }
 
-#regForm{
+#regForm {
     background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: left;
 }
 
-#gForm .btn-link{
+#gForm .btn-link {
     color: #056DAE;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.lead{
-    text-align: justify;
+.small{
+    color: #fff;
+    font-size: .5rem;
+    margin-bottom: 0
 }
-.section{
+
+.small.dark{
+    color:#212529;
+}
+
+.lead {
+    text-align: center justify;
+}
+
+.section {
     max-width: 1178px;
     margin: 0 auto;
 }
 
-.fullHeight{
+.fullHeight {
     height: 100vh;
 }
 
-#nl-location-faux-input{
+#nl-location-faux-input {
     font-weight: 900;
 }
 
 .dropdown-menu.show {
     border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .15);
 }
 
-#naturalLanguageForm h1, #naturalLanguageForm .natural.dropdown button, #naturalLanguageForm span {
+#naturalLanguageForm h1,
+#naturalLanguageForm .natural.dropdown button,
+#naturalLanguageForm span {
     color: #fff;
+}
+
+#thanks {
+    font-size: 2em;
+    position: absolute;
+    top: 1.5em;
+    z-index: 5;
+    color: #fff;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    width: 100%;
 }
 
 /* NL Form - Base
 ----------------------------------------*/
 
-.jumbotron{
+.jumbotron {
     background-image: url("../images/desk.jpg");
     background-size: cover;
-        background-position: bottom center;
+    background-position: bottom center;
     color: #056DAE;
     text-align: center;
 }
 
-.jumbotron h1{
+.jumbotron h1 {
     font-weight: 500;
 }
 
-.jumbotron p{
+.jumbotron p {
     font-weight: 300;
 }
 
-.sosumi{
+.sosumi {
     font-size: .7em;
     color: #afafaf
 }
 
-.bold{
+.bold {
     font-weight: 500 !important;
 }
 
@@ -181,7 +209,7 @@ form-group{
     /* border: 4px solid salmon; */
 }
 
-.nl-form span{
+.nl-form span {
     font-size: 1.25rem;
     line-height: 2.6rem;
     color: #454545;
@@ -191,7 +219,7 @@ form-group{
     min-width: 40px;
 }
 
-.nl-form h2{
+.nl-form h2 {
     font-size: 1.25rem;
     line-height: 2.6rem;
     color: #fff;
@@ -394,7 +422,7 @@ br.hide-for-small {
     text-align: left;
     pointer-events: none;
     opacity: 0.0;
-/*
+    /*
     -webkit-transition: all 0.3s ease-out 0.05s;
     transition: all 0.3s ease-out 0.05s;
 */
@@ -420,7 +448,7 @@ br.hide-for-small {
     color: #222;
 }
 
-.nl-faux-text-input:focus~.nl-location-tooltip {
+.nl-faux-text-input:focus ~ .nl-location-tooltip {
     opacity: 1.0;
 }
 
@@ -435,7 +463,7 @@ br.hide-for-small {
 
 .nl-submit {
     display: inline-block;
-    margin-top: 3rem;
+    margin-top: 2rem;
     min-width: 170px;
     padding: 8px 16px;
     border-radius: 2em;
@@ -450,6 +478,9 @@ br.hide-for-small {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15), 0 4px 8px rgba(0, 0, 0, .15);
     border: none;
     cursor: pointer;
+}
+#naturalLanguageForm .nl-submit{
+    margin-top: .5rem;
 }
 
 .nl-submit:hover {
@@ -469,54 +500,54 @@ br.hide-for-small {
 }
 
 /* Portrait and Landscape */
-@media only screen 
-  and (max-device-width: 667px) 
- { 
-      .natural.dropdown button{
-          font-size: 1.65rem;
-          padding-bottom: 1.3rem;
-      }
-      .natural.dropdown div a{
-          font-size: 1.65rem;
-      }
-      .lead{
-          font-size: 1.65rem;
-      }
-      .sosumi{
-          font-size: 1rem;
-      }
-      .nl-submit{
-          font-size: 1.65rem;
-          padding: .5rem 1.75rem;
-      }
-      .nl-form span{
-    font-size: 1.65rem;
-    line-height: 6rem;
-    font-weight: 300;
-    word-spacing: 8px;
-    letter-spacing: 1px;
-}
-     .nl-form h2 {
-    font-size: 1.65rem;
-    line-height: 6rem;
-    font-weight: 300;
-    word-spacing: 8px;
-    letter-spacing: 1px;
-}
-      .hidelarge{
-          display: none;
-      }
-      #nl-location-faux-input{
-          font-weight: 900;
-      }
-     .btn-link{
-         font-size: 1.5rem;
-         padding-bottom: 1.1rem;
-     }
-     body {
-         font-size: 1.5rem;
-     }
-     .form-control, .input.dropdown .btn{
-         font-size: 1.5rem;
-     }
+
+@media only screen and (max-device-width: 667px) {
+    .natural.dropdown button {
+        font-size: 1.65rem;
+        padding-bottom: 1.3rem;
+    }
+    .dropdown div a {
+        font-size: 1.65rem;
+    }
+    .lead {
+        font-size: 1.65rem;
+    }
+    .sosumi {
+        font-size: 1rem;
+    }
+    .nl-submit {
+        font-size: 1.65rem;
+        padding: .5rem 1.75rem;
+    }
+    .nl-form span {
+        font-size: 1.65rem;
+        line-height: 6rem;
+        font-weight: 300;
+        word-spacing: 8px;
+        letter-spacing: 1px;
+    }
+    .nl-form h2 {
+        font-size: 1.65rem;
+        line-height: 6rem;
+        font-weight: 300;
+        word-spacing: 8px;
+        letter-spacing: 1px;
+    }
+    .hidelarge {
+        display: none;
+    }
+    #nl-location-faux-input {
+        font-weight: 900;
+    }
+    .btn-link {
+        font-size: 1.5rem;
+        padding-bottom: 1.1rem;
+    }
+    body {
+        font-size: 1.5rem;
+    }
+    .form-control,
+    .input.dropdown .btn {
+        font-size: 1.5rem;
+    }
 }
