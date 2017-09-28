@@ -84,7 +84,7 @@ form-group {
 
 #naturalLanguageForm {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    padding: 1rem 1rem;
+    padding: 0 1rem;
     border-radius: 1rem;
     text-align: center;
 }
@@ -102,7 +102,7 @@ form-group {
 
 #regForm {
     background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-    padding: 1rem 1rem;
+    padding: 0 1rem;
     border-radius: 1rem;
     text-align: left;
 }
@@ -115,14 +115,14 @@ form-group {
     text-align: center;
 }
 
-.small{
+.small {
     color: #fff;
     font-size: .5rem;
     margin-bottom: 0
 }
 
-.small.dark{
-    color:#212529;
+.small.dark {
+    color: #212529;
 }
 
 .lead {
@@ -162,6 +162,23 @@ form-group {
     /* margin: 0 auto; */
     /* text-align: center; */
     width: 100%;
+}
+
+span#nl-location-faux-input:hover,
+span#nl-location-faux-input:focus,
+button#dropdownMenuButton:hover,
+button#dropdownMenuButton:focus,
+button#dropdownMenuButton:hover,
+button#dropdownMenuButton:focus {
+    background-color: rgba(170, 170, 255, .5);
+    border-radius: .2rem;
+    padding-left: .1rem;
+    padding-right: .1rem;
+    transition: all .5s ease;
+}
+
+.collapsing {
+    transition: height 0.6s ease;
 }
 
 /* NL Form - Base
@@ -231,7 +248,7 @@ form-group {
 }
 
 .nl-form h2.highlight {
-    background-color: rgba(170, 170, 255, .25);
+    background-color: rgba(170, 170, 255, .5);
     border-radius: 14px;
     padding: 0 .4em;
     font-weight: 900;
@@ -479,7 +496,8 @@ br.hide-for-small {
     border: none;
     cursor: pointer;
 }
-#naturalLanguageForm .nl-submit{
+
+#naturalLanguageForm .nl-submit {
     margin-top: .5rem;
 }
 
@@ -491,17 +509,20 @@ br.hide-for-small {
     font-size: 0.55rem;
     line-height: 1.25rem;
     text-transform: uppercase;
-    letter-spacing: 0.50rem;
+    letter-spacing: 0.2rem;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .15), 0 8px 16px rgba(0, 0, 0, .15);
     background: #056DAE;
-    /* red */
     border: none;
 }
 
 /* Portrait and Landscape */
 
 @media only screen and (max-device-width: 667px) {
+    .small{
+        font-size: 1rem;
+    }
+    
     .natural.dropdown button {
         font-size: 1.65rem;
         padding-bottom: 1.3rem;
