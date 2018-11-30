@@ -92,7 +92,7 @@ form-group {
 .btn-link {
     color: white;
     cursor: pointer;
-    transform: all .3s ease;
+    transform: all .35s ease;
     font-size: 15px;
 }
 
